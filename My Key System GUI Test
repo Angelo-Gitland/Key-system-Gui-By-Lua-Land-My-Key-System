@@ -68,7 +68,7 @@ local textbox = Instance.new("TextBox")
 textbox.Size = UDim2.new(0, 300, 0, 45)
 textbox.Position = UDim2.new(0.5, -150, 0, 100)
 textbox.PlaceholderText = "Text Here!" -- Changeable
-textbox.Text = "" -- Can add text
+textbox.Text = "" -- Changeable
 textbox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 textbox.TextColor3 = Color3.fromRGB(255, 255, 255)
 textbox.Font = Enum.Font.GothamSemibold
@@ -84,7 +84,7 @@ local function makeButton(name, text, posX, posY)
     btn.Name = name
     btn.Size = UDim2.new(0, 110, 0, 40)
     btn.Position = UDim2.new(0, posX, 0, posY)
-    btn.Text = text
+    btn.Text = text -- Changeable
     btn.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
     btn.TextColor3 = Color3.fromRGB(255, 255, 255)
     btn.Font = Enum.Font.GothamBold
@@ -115,18 +115,18 @@ local function notify(titleText)
 end
 
 checkKey.MouseButton1Click:Connect(function()
-    if textbox.Text == "What's the key? Place here!" then
+    if textbox.Text == "What's the key? Place here!" then -- Changeable
         notify("Valid Key!") -- Changeable
         gui:Destroy()
-        loadstring(game:HttpGet("Link"))() -- The script that will load when the key is valid
+        loadstring(game:HttpGet("Link"))() -- Changeable
     else
         notify("Invalid Key!") -- Changeable
     end
 end)
 
 getKey.MouseButton1Click:Connect(function()
-    notify("Copied!")
-    setclipboard("Link Here!") -- The link to get key
+    notify("Copied!") -- Changeable
+    setclipboard("Link Here!") -- Changeable
 end)
 
 destroyBtn.MouseButton1Click:Connect(function()
