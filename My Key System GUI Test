@@ -1,4 +1,7 @@
 -- Source code
+-- Edit this script by changing the code 
+-- If you see any comment marks "-- " that means you can edit
+-- Tutorial Script Are Here: 
 
 local player = game.Players.LocalPlayer
 local gui = Instance.new("ScreenGui")
